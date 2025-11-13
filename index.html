@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Артём и Елизавета — 26.07.2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --maroon-dark:#3b0304;--maroon:#5b0a0b;--maroon-light:#7a0f12;
+  --cream:#f7efe9;--accent:#cda15b;--soft:rgba(247,239,233,0.92);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{
+  font-family:'Lora',serif;color:var(--soft);
+  background:linear-gradient(180deg,var(--maroon-dark)0%,var(--maroon)40%,var(--maroon-light)100%);
+  overflow-x:hidden;-webkit-font-smoothing:antialiased;
+}
+body::before{
+  content:"";position:fixed;inset:0;z-index:0;pointer-events:none;
+  background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="260" height="260" viewBox="0 0 120 120" fill="%23f7efe9" opacity="0.18"><text x="10" y="30" font-family="serif" font-size="30">💍</text><text x="80" y="60" font-family="serif" font-size="28">🌸</text><text x="40" y="100" font-family="serif" font-size="30">🎂</text><text x="100" y="110" font-family="serif" font-size="28">💖</text></svg>');
+  background-repeat:repeat;background-size:220px;opacity:.18;
+}
+main{max-width:1000px;margin:0 auto;padding:0 16px;position:relative;z-index:2}
+h2{font-family:'Playfair Display',serif;color:var(--cream);text-align:center;margin-bottom:12px;font-size:28px}
+.divider{text-align:center;margin:50px 0 30px;}
+.divider svg{width:80px;height:auto;opacity:.18}
+
+/* HERO */
+.hero{position:relative;height:80vh;min-height:520px;border-radius:14px;overflow:hidden}
+.hero .bg{position:absolute;inset:0;background:url('39.JPG')center/cover no-repeat;will-change:transform}
+.hero .overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.25),rgba(0,0,0,.65))}
+.hero-content{position:absolute;bottom:30px;left:0;right:0;text-align:center;z-index:2}
+.names{font-family:'Great Vibes',cursive;font-size:70px;color:var(--cream);text-shadow:0 6px 20px rgba(0,0,0,.6)}
+.sub{font-size:18px;margin-top:8px}
+.date-badge{font-family:'Playfair Display';font-size:20px;margin-top:6px;color:var(--soft)}
+
+/* TIMER */
+.timer-section{text-align:center;padding:60px 0}
+.timer-text{font-family:'Playfair Display';font-size:20px;color:var(--cream)}
+.timer-days{font-family:'Playfair Display';font-size:90px;color:var(--accent);text-shadow:0 10px 30px rgba(0,0,0,.5)}
+
+/* TIMELINE */
+.timeline{position:relative;margin:70px auto;max-width:600px}
+.timeline svg{width:100%;height:750px;display:block}
+.timeline-item{
+  position:absolute;width:50%;
+  opacity:0;transform:translateY(50px);
+  animation:fadeInUp 1s forwards ease;
+}
+.timeline-item:nth-child(2){animation-delay:.4s}
+.timeline-item:nth-child(3){animation-delay:.8s}
+.timeline-item:nth-child(4){animation-delay:1.2s}
+.timeline-item:nth-child(5){animation-delay:1.6s}
+@keyframes fadeInUp{
+  to{opacity:1;transform:translateY(0)}
+}
+.timeline-content{
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:10px;padding:10px 14px;
+  box-shadow:0 6px 20px rgba(0,0,0,.4);
+  max-width:220px;font-size:14px;
+}
+.timeline-content h4{font-family:'Playfair Display';font-size:18px;margin-bottom:4px;color:var(--cream)}
+.left .timeline-content{right:calc(50% + 30px);text-align:right}
+.right .timeline-content{left:calc(50% + 30px);text-align:left}
+
+/* DRESS CODE */
+.dress-colors{display:flex;justify-content:center;gap:40px;margin-top:25px;flex-wrap:wrap}
+.color-swatch{display:flex;flex-direction:column;align-items:center;gap:6px}
+.color-circle{width:70px;height:70px;border-radius:50%;border:2px solid #fff;box-shadow:0 4px 10px rgba(0,0,0,.3)}
+.cabernet{background:#4d0f1b}
+.potting{background:#543b2a}
+.buttercream{background:#f4e2c3}
+.color-label{font-size:14px;font-family:'Lora';color:var(--soft)}
+
+/* BUTTON */
+.btn{display:inline-block;margin-top:20px;background:linear-gradient(135deg,var(--accent),#f3d9a2);
+  color:var(--maroon-dark);padding:14px 28px;border-radius:30px;font-weight:700;text-transform:uppercase;
+  letter-spacing:1px;font-family:'Playfair Display';text-decoration:none;box-shadow:0 6px 20px rgba(0,0,0,.4);
+  transition:all .3s ease}
+.btn:hover{transform:translateY(-3px);box-shadow:0 10px 25px rgba(0,0,0,.5);background:linear-gradient(135deg,#f3d9a2,var(--accent))}
+
+/* CREATIVE */
+.creative-block{margin-top:20px;background:rgba(255,255,255,.04);border-radius:12px;padding:18px;box-shadow:0 8px 30px rgba(0,0,0,.4)}
+.creative-contact{margin-top:10px;font-size:15px;color:var(--soft)}
+footer{text-align:center;padding:30px 10px;font-size:13px;color:rgba(255,255,255,.6)}
+@media(max-width:760px){
+  .names{font-size:48px}
+  .timeline svg{height:600px}
+  .timeline-content{max-width:180px}
+  .left .timeline-content,.right .timeline-content{left:auto;right:auto;text-align:center}
+}
+</style>
+</head>
+<body>
+<main>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="bg" id="heroBg"></div>
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h1 class="names">Артём и Елизавета</h1>
+      <div class="sub">С радостью приглашаем вас на нашу свадьбу</div>
+      <div class="date-badge">26.07.2026</div>
+    </div>
+  </section>
+
+  <!-- TIMER -->
+  <section class="timer-section">
+    <div class="timer-text">Дней до свадьбы осталось</div>
+    <div id="days" class="timer-days">---</div>
+  </section>
+
+  <!-- TIMELINE -->
+  <section>
+    <h2>Тайминг</h2>
+    <div class="timeline">
+      <svg viewBox="0 0 200 750"><path d="M100,20 C30,150 170,300 100,500 C60,620 130,700 100,740" stroke="#f7efe9" stroke-width="2" fill="none" stroke-linecap="round" stroke-opacity=".9"/></svg>
+      <div class="timeline-item left" style="top:40px"><div class="timeline-content"><h4>Фуршет</h4><p>14:00 — Встреча гостей, лёгкие угощения и общение.</p></div></div>
+      <div class="timeline-item right" style="top:210px"><div class="timeline-content"><h4>Церемония</h4><p>15:00 — Торжественная часть и обмен клятвами.</p></div></div>
+      <div class="timeline-item left" style="top:400px"><div class="timeline-content"><h4>Банкет</h4><p>16:00 — Праздничный ужин, тосты и развлечения.</p></div></div>
+      <div class="timeline-item right" style="top:590px"><div class="timeline-content"><h4>Финал</h4><p>21:00 — Торт, танцы и завершение вечера.</p></div></div>
+    </div>
+  </section>
+
+  <!-- DRESS CODE -->
+  <section>
+    <h2>Dress code</h2>
+    <p style="text-align:center;">Дорогие гости, просим вас соблюдать определённый формат мероприятия и одеться по дресс-коду, чтобы потом наши общие фоточки смотрелись красиво и лаконично. Даже если очень хочется, никаких костюмов человека-паука и надувных динозавров!</p>
+    <p style="text-align:center;margin-top:10px;">Палитра праздника — бордовый, тёплый коричневый и сливочно-кремовый.</p>
+    <div class="dress-colors">
+      <div class="color-swatch"><div class="color-circle cabernet"></div><div class="color-label">Cabernet</div></div>
+      <div class="color-swatch"><div class="color-circle potting"></div><div class="color-label">Potting Soil</div></div>
+      <div class="color-swatch"><div class="color-circle buttercream"></div><div class="color-label">Buttercream</div></div>
+    </div>
+  </section>
+
+  <div class="divider"><svg viewBox="0 0 100 10"><path d="M0,5 Q50,0 100,5 Q50,10 0,5Z" fill="#fff"/></svg></div>
+
+  <!-- SURVEY -->
+  <section style="text-align:center;">
+    <h2>Анкета</h2>
+    <p>Пожалуйста, заполните короткую форму — она поможет нам лучше организовать день.</p>
+    <a class="btn" id="googleFormBtn" href="#" target="_blank">Заполнить анкету</a>
+  </section>
+
+  <div class="divider"><svg viewBox="0 0 100 10"><path d="M0,5 Q50,0 100,5 Q50,10 0,5Z" fill="#fff"/></svg></div>
+
+  <!-- CREATIVE -->
+  <section>
+    <h2>Для самых весёлых и инициативных</h2>
+    <div class="creative-block">
+      <p>Если вы хотите украсить вечер не только своим присутствием, но и каким-либо интерактивом, выступлением или другой творческой задумкой — смело свяжитесь с ведущим! Мы будем рады любой вашей идее, даже если она немножечко <em>cringe</em>. Обязательно стоит упомянуть "Свадьба Лизы и Артёма 26.07.2026", чтобы затем не пришлось выступать по ошибке на чужой свадьбе в качестве приглашенных артистов	&#128517</p>
+      <div class="creative-contact">Ведущий: <strong>Леонид Родин</strong><br>Телефон: <a href="tel:+79521168690" style="color:var(--accent);text-decoration:none;">+7 (952) 116-86-90</a>
+</div>
+    </div>
+  </section>
+
+  <footer>powered by Жених</footer>
+</main>
+
+<script>
+const GOOGLE_FORM_URL="https://forms.gle/YOUR_GOOGLE_FORM_LINK";
+document.getElementById("googleFormBtn").href=GOOGLE_FORM_URL;
+function updateDays(){
+  const now=new Date(),target=new Date(2026,6,26);
+  const diff=target-now,days=Math.max(0,Math.floor(diff/(1000*60*60*24)));
+  document.getElementById("days").textContent=days;
+}
+updateDays();setInterval(updateDays,3600000);
+const heroBg=document.getElementById("heroBg");
+window.addEventListener("scroll",()=>{heroBg.style.transform=`translateY(${window.scrollY*0.15}px) scale(1.05)`},{passive:true});
+</script>
+</body>
+</html>
