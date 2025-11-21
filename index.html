@@ -245,10 +245,19 @@ h2::after{
   position:absolute;
   left:50%;
   transform:translateX(-50%);
-  top:38px;
-  bottom:18px;
+  top:18px;
+  bottom:-22px;
   width:3px;
-  background:linear-gradient(180deg, var(--butter), var(--gold), var(--butter));
+  background:linear-gradient(
+    180deg, 
+    rgba(244,226,195,0) 0%,
+    rgba(244,226,195,0.3) 5%,
+    var(--butter) 10%,
+    var(--gold) 50%,
+    var(--butter) 90%,
+    rgba(244,226,195,0.3) 95%,
+    rgba(244,226,195,0) 100%
+  );
   border-radius:6px;
   box-shadow:0 0 10px rgba(205,161,91,0.5);
 }
@@ -585,7 +594,20 @@ a[href^="tel:"]:hover{
   }
   
   .timeline{min-height:340px;padding:8px 0;}
-  .timeline::before{top:38px;bottom:18px;}
+  .timeline::before{
+    top:18px;
+    bottom:-22px;
+    background:linear-gradient(
+      180deg, 
+      rgba(244,226,195,0) 0%,
+      rgba(244,226,195,0.3) 5%,
+      var(--butter) 10%,
+      var(--gold) 50%,
+      var(--butter) 90%,
+      rgba(244,226,195,0.3) 95%,
+      rgba(244,226,195,0) 100%
+    );
+  }
 }
 
 @media(max-width:480px){
