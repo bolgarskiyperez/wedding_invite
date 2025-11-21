@@ -68,6 +68,7 @@ h2{
   display:inline-block;
   left:50%;
   transform:translateX(-50%);
+  text-align:center;
 }
 h2::after{
   content:'';
@@ -231,13 +232,13 @@ h2::after{
 }
 
 /* Timeline with enhanced design */
-.timeline-wrap{display:flex;justify-content:center;margin:40px 0}
+.timeline-wrap{display:flex;justify-content:center;margin:25px 0}
 .timeline{
   position:relative;
   width:400px;
   max-width:96%;
-  padding:30px 0;
-  min-height:480px;
+  padding:10px 0;
+  min-height:340px;
 }
 
 /* Glowing line */
@@ -246,7 +247,7 @@ h2::after{
   position:absolute;
   left:50%;
   transform:translateX(-50%);
-  top:18px;
+  top:38px;
   bottom:18px;
   width:3px;
   background:linear-gradient(180deg, var(--butter), var(--gold), var(--butter));
@@ -576,11 +577,17 @@ a[href^="tel:"]:hover{
     grid-row:span 1;
     aspect-ratio:4/3;
   }
+  .gallery-item.small{
+    aspect-ratio:1;
+  }
   .gallery-right{
     display:grid;
     grid-template-columns:1fr 1fr;
     gap:15px;
   }
+  
+  .timeline{min-height:340px;padding:8px 0;}
+  .timeline::before{top:38px;bottom:18px;}
 }
 
 @media(max-width:480px){
@@ -588,11 +595,14 @@ a[href^="tel:"]:hover{
   .hero-names{font-size:38px;}
   .hero-date{font-size:16px;}
   h2{font-size:26px;}
-  .timeline{min-height:420px;}
+  .timeline{min-height:320px;}
   .event{font-size:19px;}
   .event .time{font-size:16px;}
   .color-row{gap:15px;}
   .color-row div{width:60px;height:60px;}
+  
+  .gallery-album{padding:15px;}
+  .gallery-item.small{aspect-ratio:3/4;}
 }
 
 @media(max-width:380px){
@@ -646,32 +656,32 @@ a[href^="tel:"]:hover{
 
   <!-- Timeline -->
   <section class="scroll-reveal">
-    <h2>Тайминг</h2>
+    <h2 style="margin-bottom:10px;">Тайминг</h2>
 
     <div class="timeline-wrap">
       <div class="timeline" id="timelineBlock">
 
-        <div class="marker pos-2" style="top:98px"></div>
-        <div class="marker pos-3" style="top:176px"></div>
-        <div class="marker pos-4" style="top:254px"></div>
-        <div class="marker pos-5" style="top:332px"></div>
+        <div class="marker pos-2" style="top:88px"></div>
+        <div class="marker pos-3" style="top:146px"></div>
+        <div class="marker pos-4" style="top:204px"></div>
+        <div class="marker pos-5" style="top:262px"></div>
 
-        <div class="event right pos-2" style="top:84px">
+        <div class="event right pos-2" style="top:74px">
           <span class="time">15:30</span>
           Фуршет
         </div>
 
-        <div class="event left pos-3" style="top:162px">
+        <div class="event left pos-3" style="top:132px">
           <span class="time">16:00</span>
           Свадебная церемония
         </div>
 
-        <div class="event right pos-4" style="top:240px">
+        <div class="event right pos-4" style="top:190px">
           <span class="time">17:00</span>
           Банкет
         </div>
 
-        <div class="event left pos-5" style="top:318px">
+        <div class="event left pos-5" style="top:248px">
           <span class="time">23:00</span>
           Завершение торжества
         </div>
@@ -708,7 +718,7 @@ a[href^="tel:"]:hover{
 
   <!-- Gifts -->
   <section class="scroll-reveal" style="max-width:820px;margin:0 auto;text-align:center;padding:0 15px;">
-    <h2>Подарки</h2>
+    <h2 style="text-align:center;display:block;left:0;transform:none;">Подарки</h2>
     <p>
       Мы — молодая семья, у которой ипотека и ремонт. Лучшим подарком для нас будут деньги :)
     </p>
@@ -734,7 +744,7 @@ a[href^="tel:"]:hover{
 
   <!-- Creative -->
   <section class="scroll-reveal" style="max-width:820px;margin:0 auto;text-align:center;padding:0 15px;">
-    <h2>Для самых весёлых и находчивых</h2>
+    <h2 style="text-align:center;display:block;left:0;transform:none;">Для самых весёлых и находчивых</h2>
     <p style="margin-top:12px;">
      Если вы хотите украсить вечер выступлением, то смело пишите ведущему! 
      Будем рады любой идее, даже если она немного cringe :)
@@ -773,7 +783,7 @@ a[href^="tel:"]:hover{
         </div>
         <div class="gallery-right">
           <div class="gallery-item small">
-            <img src="2.jpg" alt="Наши моменты">
+            <img src="2.HEIC" alt="Наши моменты">
           </div>
           <div class="gallery-item small">
             <img src="3.JPG" alt="Мы вместе">
